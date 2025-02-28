@@ -34,10 +34,10 @@ public class MicAccess {
             ByteArrayOutputStream out = new ByteArrayOutputStream();
 
             // Capture audio for a specified duration 3000ms or 3 seconds
-            long end = System.currentTimeMillis() + 3000;
+            long recordLength = System.currentTimeMillis() + 3000;
 
             // Capture audio for a specified duration -> end, writing the audio to the out stream
-            while (System.currentTimeMillis() < end) {
+            while (System.currentTimeMillis() < recordLength) {
                 int numBytesRead = microphone.read(data, 0, data.length);
                 out.write(data, 0, numBytesRead);
             }

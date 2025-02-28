@@ -45,7 +45,9 @@ public class Transcribe {
             // Use blocking call to get audio transcript
             RecognizeResponse response = speech.recognize(config, audio);
             List<SpeechRecognitionResult> results = response.getResultsList();
-
+            
+            //Check if the results are empty
+            //IF THEY ARE CHECK YOUR DAMN MIC
             if (results.isEmpty()) {
                 LoggerUtil.logError(new Exception("No transcription results returned."),
                         "No transcription results returned.");
@@ -53,8 +55,7 @@ public class Transcribe {
 
             for (SpeechRecognitionResult result : results) {
                 // There can be several alternative transcripts for a given chunk of speech.
-                // Just use the
-                // first (most likely) one here.
+                // Just use the first (most likely) one here.
                 SpeechRecognitionAlternative alternative = result.getAlternativesList().get(0);
                 System.out.printf("Transcription: %s%n", alternative.getTranscript());
             }
