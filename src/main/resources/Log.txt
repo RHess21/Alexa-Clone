@@ -1,0 +1,4 @@
+Exception in Transcribe.java:44 - No transcription results returned.
+Exception in Transcribe.java:50 - No transcription results returned.
+Exception in Transcribe.java:50 - No transcription results returned.
+Exception in Transcribe.java:50 - No transcription results returned.
