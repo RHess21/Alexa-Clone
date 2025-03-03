@@ -13,6 +13,7 @@ public class Main {
      * 
      * Has to be done this way instead of streaming all audio until program stops because THIS ISNT FREE.
      */
+
     public static void main(String[] args) {
         // Creates a JFRAME to capture the key events 
         JFrame frame = new JFrame("Key Listener");
